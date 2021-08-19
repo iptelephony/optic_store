@@ -17,8 +17,8 @@ export function get_formatted(doc) {
     }
     if (
       param.includes('bc') ||
-      param.includes('dia') ||
-      param.includes('prism')
+      param.includes('dia')/* ||
+      param.includes('prism')*/
     ) {
       return parseFloat(value).toFixed(2);
     }
