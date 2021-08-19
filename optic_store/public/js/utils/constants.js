@@ -32,7 +32,7 @@ export function get_signed_fields() {
 }
 
 export function get_prec2_fields() {
-  const params = ['bc', 'dia', 'prism', 'iop'];
+  const params = ['bc', 'dia', 'iop'];
   return ['right', 'left']
     .map(side =>
       [...params, ...params.map(p => `${p}_reading`)].map(p => `${p}_${side}`)

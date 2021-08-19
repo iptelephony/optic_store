@@ -166,8 +166,7 @@
   {
    "fieldname": "va_right",
    "fieldtype": "Data",
-   "label": "VA",
-   "precision": "2"
+   "label": "VA"
   },
   {
    "depends_on": "eval:doc.type=='Contacts'",
@@ -261,8 +260,7 @@
   {
    "fieldname": "va_left",
    "fieldtype": "Data",
-   "label": "VA",
-   "precision": "2"
+   "label": "VA"
   },
   {
    "depends_on": "eval:doc.type=='Contacts'",
@@ -368,8 +366,7 @@
   {
    "fieldname": "prism_right",
    "fieldtype": "Data",
-   "label": "Right",
-   "precision": "2"
+   "label": "Right"
   },
   {
    "fieldname": "prism_col",
@@ -378,8 +375,7 @@
   {
    "fieldname": "prism_left",
    "fieldtype": "Data",
-   "label": "Left",
-   "precision": "2"
+   "label": "Left"
   },
   {
    "collapsible": 1,
