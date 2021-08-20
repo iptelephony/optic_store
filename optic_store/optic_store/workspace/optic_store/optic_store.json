@@ -1,0 +1,39 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-08-19 15:45:29.390767",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "search",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Optic Store",
+ "links": [],
+ "modified": "2021-08-19 17:37:44.118384",
+ "modified_by": "Administrator",
+ "module": "Optic Store",
+ "name": "Optic Store",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Optical Prescriptions",
+   "link_to": "Optical Prescription",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Optic Store Settings",
+   "link_to": "Optical Store Settings",
+   "type": "DocType"
+  }
+ ],
+ "shortcuts_label": "Shortcuts"
+}
