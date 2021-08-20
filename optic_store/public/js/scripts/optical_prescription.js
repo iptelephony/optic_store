@@ -53,11 +53,11 @@ function update_fields(frm) {
     }
     if (field.includes('va')) {
       //return /^[p0-9]*\/?[p0-9]*$/;
-      return /^(\w|[!@#$%^&*()_+.]){0,15}$/;
+      return /^.{0,15}$/;
     }
     if (field.includes('prism')) {
       //return /^[p0-9]*\/?[p0-9]*$/;
-      return /^(\w|[!@#$%^&*()_+.]){0,15}$/;
+      return /^.{0,15}$/;
     }
     if (prec2_fields.includes(field)) {
       return /^\d*\.?\d{0,2}$/;
