@@ -11,11 +11,6 @@ def get_data():
                 {"type": "doctype", "name": "Sales Order", "label": _("Sales Order")},
                 {
                     "type": "doctype",
-                    "name": "Optical Visit",
-                    "label": _("Optical Visit"),
-                },
-                {
-                    "type": "doctype",
                     "name": "Optical Prescription",
                     "label": _("Optical Prescription"),
                 },
