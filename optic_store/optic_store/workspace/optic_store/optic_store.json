@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2021-08-19 17:37:44.118384",
+ "modified": "2021-10-05 06:45:04.795880",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -26,6 +26,12 @@
    "doc_view": "Calendar",
    "label": "Appointments",
    "link_to": "Event",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Optical Visits",
+   "link_to": "Optical Visit",
    "type": "DocType"
   },
   {

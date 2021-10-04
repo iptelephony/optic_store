@@ -1,0 +1,482 @@
+{
+ "actions": [],
+ "autoname": "OV-.YY.-.#####",
+ "creation": "2021-10-05 06:44:00.857644",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "meta_col",
+  "test_date",
+  "expiry_date",
+  "amended_from",
+  "type_sec",
+  "type",
+  "type_col",
+  "details_simple_sec",
+  "details_html",
+  "details_sec",
+  "details_col_right",
+  "sph_right",
+  "cyl_right",
+  "axis_right",
+  "va_right",
+  "bc_right",
+  "dia_right",
+  "near_right",
+  "intermediate_right",
+  "add_right",
+  "sph_reading_right",
+  "cyl_reading_right",
+  "axis_reading_right",
+  "va_reading_right",
+  "bc_reading_right",
+  "dia_reading_right",
+  "details_col_left",
+  "sph_left",
+  "cyl_left",
+  "axis_left",
+  "va_left",
+  "bc_left",
+  "dia_left",
+  "near_left",
+  "intermediate_left",
+  "add_left",
+  "sph_reading_left",
+  "cyl_reading_left",
+  "axis_reading_left",
+  "va_reading_left",
+  "bc_reading_left",
+  "dia_reading_left",
+  "pd_sec",
+  "pd_right",
+  "pd_col",
+  "pd_left",
+  "pd_total",
+  "prism_sec",
+  "prism_right",
+  "prism_col",
+  "prism_left",
+  "iop_sec",
+  "iop_right",
+  "iop_col",
+  "iop_left",
+  "info_sec",
+  "notes",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "meta_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Test Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Optical Prescription",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "type_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Prescription Type",
+   "options": "\nSpectacles\nContact Lens",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "type",
+   "fieldname": "details_simple_sec",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "details_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_sec",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Details"
+  },
+  {
+   "fieldname": "details_col_right",
+   "fieldtype": "Column Break",
+   "label": "Right"
+  },
+  {
+   "fieldname": "sph_right",
+   "fieldtype": "Data",
+   "label": "SPH",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cyl_right",
+   "fieldtype": "Data",
+   "label": "CYL",
+   "precision": "2"
+  },
+  {
+   "fieldname": "axis_right",
+   "fieldtype": "Data",
+   "label": "AXIS"
+  },
+  {
+   "fieldname": "va_right",
+   "fieldtype": "Data",
+   "label": "VA"
+  },
+  {
+   "depends_on": "eval:doc.type=='Contacts'",
+   "fieldname": "bc_right",
+   "fieldtype": "Data",
+   "label": "BC",
+   "precision": "2"
+  },
+  {
+   "depends_on": "eval:doc.type=='Contacts'",
+   "fieldname": "dia_right",
+   "fieldtype": "Data",
+   "label": "DIA",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "fieldname": "near_right",
+   "fieldtype": "Check",
+   "label": "Near"
+  },
+  {
+   "default": "0",
+   "fieldname": "intermediate_right",
+   "fieldtype": "Check",
+   "label": "Intermediate"
+  },
+  {
+   "depends_on": "eval:doc.add_type_right!=''",
+   "fieldname": "add_right",
+   "fieldtype": "Data",
+   "label": "ADD",
+   "precision": "2"
+  },
+  {
+   "fieldname": "sph_reading_right",
+   "fieldtype": "Data",
+   "label": "SPH (Reading)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cyl_reading_right",
+   "fieldtype": "Data",
+   "label": "CYL (Reading)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "axis_reading_right",
+   "fieldtype": "Data",
+   "label": "AXIS (Reading)"
+  },
+  {
+   "fieldname": "va_reading_right",
+   "fieldtype": "Data",
+   "label": "VA (Reading)"
+  },
+  {
+   "fieldname": "bc_reading_right",
+   "fieldtype": "Data",
+   "label": "BC (Reading)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "dia_reading_right",
+   "fieldtype": "Data",
+   "label": "DIA (Reading)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "details_col_left",
+   "fieldtype": "Column Break",
+   "label": "Left"
+  },
+  {
+   "fieldname": "sph_left",
+   "fieldtype": "Data",
+   "label": "SPH",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cyl_left",
+   "fieldtype": "Data",
+   "label": "CYL",
+   "precision": "2"
+  },
+  {
+   "fieldname": "axis_left",
+   "fieldtype": "Data",
+   "label": "AXIS"
+  },
+  {
+   "fieldname": "va_left",
+   "fieldtype": "Data",
+   "label": "VA"
+  },
+  {
+   "depends_on": "eval:doc.type=='Contacts'",
+   "fieldname": "bc_left",
+   "fieldtype": "Data",
+   "label": "BC",
+   "precision": "1"
+  },
+  {
+   "depends_on": "eval:doc.type=='Contacts'",
+   "fieldname": "dia_left",
+   "fieldtype": "Data",
+   "label": "DIA",
+   "precision": "1"
+  },
+  {
+   "default": "0",
+   "fieldname": "near_left",
+   "fieldtype": "Check",
+   "label": "Near"
+  },
+  {
+   "default": "0",
+   "fieldname": "intermediate_left",
+   "fieldtype": "Check",
+   "label": "Intermediate"
+  },
+  {
+   "depends_on": "eval:doc.add_type_left!=''",
+   "fieldname": "add_left",
+   "fieldtype": "Data",
+   "label": "ADD",
+   "precision": "2"
+  },
+  {
+   "fieldname": "sph_reading_left",
+   "fieldtype": "Data",
+   "label": "SPH (Reading)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cyl_reading_left",
+   "fieldtype": "Data",
+   "label": "CYL (Reading)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "axis_reading_left",
+   "fieldtype": "Data",
+   "label": "AXIS (Reading)"
+  },
+  {
+   "fieldname": "va_reading_left",
+   "fieldtype": "Data",
+   "label": "VA (Reading)"
+  },
+  {
+   "fieldname": "bc_reading_left",
+   "fieldtype": "Data",
+   "label": "BC (Reading)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "dia_reading_left",
+   "fieldtype": "Data",
+   "label": "DIA (Reading)",
+   "precision": "2"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "pd_sec",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Pupillary Distance"
+  },
+  {
+   "fieldname": "pd_right",
+   "fieldtype": "Data",
+   "label": "Right (mm)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "pd_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pd_left",
+   "fieldtype": "Data",
+   "label": "Left (mm)"
+  },
+  {
+   "fieldname": "pd_total",
+   "fieldtype": "Data",
+   "label": "Total (mm)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "prism_sec",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Prism"
+  },
+  {
+   "fieldname": "prism_right",
+   "fieldtype": "Data",
+   "label": "Right"
+  },
+  {
+   "fieldname": "prism_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prism_left",
+   "fieldtype": "Data",
+   "label": "Left"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "iop_sec",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Intraocular Pressure"
+  },
+  {
+   "fieldname": "iop_right",
+   "fieldtype": "Data",
+   "label": "Right (mmHg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "iop_col",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "iop_left",
+   "fieldtype": "Data",
+   "label": "Left (mmHg)",
+   "precision": "2"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "info_sec",
+   "fieldtype": "Section Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Prescription Notes"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Optical Visit",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-10-05 06:44:00.857644",
+ "modified_by": "Administrator",
+ "module": "Optic Store",
+ "name": "Optical Visit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Optician",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "customer_name",
+ "track_changes": 1
+}

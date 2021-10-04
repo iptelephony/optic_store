@@ -1,3 +1,4 @@
+import optical_visit from './optical_visit';
 import optical_prescription from './optical_prescription';
 import optical_store_settings from './optical_store_settings';
 import optical_store_selling_settings from './optical_store_selling_settings';
@@ -28,6 +29,7 @@ export { default as employee } from './employee';
 export { default as branch } from './branch';
 export { default as item } from './item';
 export { default as optical_prescription_qe } from './optical_prescription_qe';
+export { default as optical_visit_qe } from './optical_visit_qe';
 export { default as batch_qe } from './batch_qe';
 export { default as stock_entry } from './stock_entry';
 export { default as salary_slip } from './salary_slip';
