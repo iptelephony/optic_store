@@ -23,6 +23,12 @@
  "pin_to_top": 0,
  "shortcuts": [
   {
+   "doc_view": "Calendar",
+   "label": "Appointments",
+   "link_to": "Event",
+   "type": "DocType"
+  },
+  {
    "doc_view": "List",
    "label": "Optical Prescriptions",
    "link_to": "Optical Prescription",
