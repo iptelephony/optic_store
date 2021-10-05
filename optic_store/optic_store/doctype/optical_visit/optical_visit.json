@@ -12,7 +12,9 @@
   "meta_col",
   "test_date",
   "expiry_date",
+  "next_appointment_date",
   "amended_from",
+  "data_8",
   "type_sec",
   "type",
   "type_col",
@@ -65,9 +67,22 @@
   "iop_col",
   "iop_left",
   "info_sec",
+  "prescription_notes_section",
   "notes",
-  "remarks",
-  "amended_from"
+  "column_break_63",
+  "notes_cust",
+  "slit_lamp_section",
+  "slitlamp",
+  "column_break_67",
+  "slitlamp_cust",
+  "fundus_section",
+  "fundus",
+  "column_break_71",
+  "fundus_cust",
+  "section_break_73",
+  "ap",
+  "section_break_74",
+  "remarks"
  ],
  "fields": [
   {
@@ -93,9 +108,9 @@
    "default": "Today",
    "fieldname": "test_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "in_list_view": 1,
-   "label": "Test Date",
-   "reqd": 1
+   "label": "Test Date"
   },
   {
    "fieldname": "expiry_date",
@@ -107,7 +122,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Optical Prescription",
+   "options": "Optical Visit",
    "print_hide": 1,
    "read_only": 1
   },
@@ -410,13 +425,12 @@
   },
   {
    "fieldname": "notes",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Prescription Notes"
   },
   {
    "fieldname": "remarks",
-   "fieldtype": "Text",
-   "label": "Remarks"
+   "fieldtype": "Text"
   },
   {
    "fieldname": "amended_from",
@@ -426,11 +440,86 @@
    "options": "Optical Visit",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "next_appointment_date",
+   "fieldtype": "Date",
+   "label": "Next Appointment Date"
+  },
+  {
+   "fieldname": "data_8",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "prescription_notes_section",
+   "fieldtype": "Section Break",
+   "label": "Prescription Notes"
+  },
+  {
+   "fieldname": "column_break_63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes_cust",
+   "fieldtype": "Small Text",
+   "label": "Prescription Notes (Patient)"
+  },
+  {
+   "fieldname": "slit_lamp_section",
+   "fieldtype": "Section Break",
+   "label": "Slit Lamp"
+  },
+  {
+   "fieldname": "slitlamp",
+   "fieldtype": "Small Text",
+   "label": "Slit Lamp"
+  },
+  {
+   "fieldname": "column_break_67",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "slitlamp_cust",
+   "fieldtype": "Small Text",
+   "label": "Slit Lamp (Patient)"
+  },
+  {
+   "fieldname": "fundus_section",
+   "fieldtype": "Section Break",
+   "label": "Fundus"
+  },
+  {
+   "fieldname": "fundus",
+   "fieldtype": "Small Text",
+   "label": "Fundus"
+  },
+  {
+   "fieldname": "column_break_71",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fundus_cust",
+   "fieldtype": "Small Text",
+   "label": "Fundus (Patient)"
+  },
+  {
+   "fieldname": "ap",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "section_break_74",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_73",
+   "fieldtype": "Section Break",
+   "label": "Assessment and Plan"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-05 06:44:00.857644",
+ "modified": "2021-10-05 14:18:31.036998",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
