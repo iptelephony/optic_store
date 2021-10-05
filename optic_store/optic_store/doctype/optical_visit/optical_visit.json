@@ -18,6 +18,9 @@
   "type_sec",
   "type",
   "type_col",
+  "sr_details_simple_sec",
+  "sr_details_html",
+  "sr_details_sec",
   "details_simple_sec",
   "details_html",
   "details_sec",
@@ -142,6 +145,24 @@
    "fieldname": "type_col",
    "fieldtype": "Column Break"
   },
+  {
+   "depends_on": "type",
+   "fieldname": "sr_details_simple_sec",
+   "fieldtype": "Section Break",
+   "label": "Subjective Refraction"
+  },
+  {
+   "fieldname": "sr_details_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sr_details_sec",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Subjective Refraction"
+  },
+
   {
    "depends_on": "type",
    "fieldname": "details_simple_sec",
