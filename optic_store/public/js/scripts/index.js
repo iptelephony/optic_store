@@ -36,6 +36,7 @@ export { default as salary_slip } from './salary_slip';
 export { default as payroll_entry } from './payroll_entry';
 
 export default {
+	optical_visit,
   optical_prescription,
   optical_store_settings,
   optical_store_selling_settings,

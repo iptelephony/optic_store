@@ -131,6 +131,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": "Spectacles",
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Prescription Type",
@@ -519,7 +520,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-05 14:18:31.036998",
+ "modified": "2021-10-05 14:42:12.701071",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
