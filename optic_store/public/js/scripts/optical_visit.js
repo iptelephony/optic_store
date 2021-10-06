@@ -32,6 +32,8 @@ function handle_reading(side) {
 
 function toggle_detail_entry(frm, state) {
   frm.toggle_display('details_simple_sec', !state);
+  frm.toggle_display('sr_simple_sec', !state);
+  frm.toggle_display('sr_sec', state);
   frm.toggle_display(['details_sec', 'pd_sec', 'prism_sec', 'iop_sec'], state);
 }
 
@@ -91,8 +93,8 @@ function blur_fields(frm) {
   };
 }
 
-function render_detail_vue(frm) {
-  const { $wrapper } = frm.get_field('details_html');
+function render_detail_vue(frm, fieldName) {
+  const { $wrapper } = frm.get_field(fieldName);
   $wrapper.empty();
   const doc = Object.assign(
     get_all_rx_params().reduce((a, x) => Object.assign(a, { [x]: undefined }), {}),
@@ -116,6 +118,9 @@ function render_detail_vue(frm) {
 }
 
 function update_detail_vue_props(frm) {
+  if (frm.sr_vue) {
+    frm.sr_vue.doc = Object.assign(frm.sr_vue.doc, frm.doc);
+  }
   if (frm.detail_vue) {
     frm.detail_vue.doc = Object.assign(frm.detail_vue.doc, frm.doc);
   }
@@ -148,7 +153,9 @@ export default {
     frm.route_back = setup_route_back(frm);
   },
   refresh: function(frm) {
-    frm.detail_vue = render_detail_vue(frm);
+    //frm.detail_vue = render_detail_vue(frm, 'details_html');
+    frm.sr_vue = render_detail_vue(frm, 'sr_html');
+    frm.detail_vue = render_detail_vue(frm, 'details_html');
     if (frm.doc.__islocal) {
       set_expiry_date(frm);
     }

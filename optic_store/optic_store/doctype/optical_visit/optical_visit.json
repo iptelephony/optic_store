@@ -9,18 +9,36 @@
  "field_order": [
   "customer",
   "customer_name",
+  "type",
   "meta_col",
   "test_date",
   "expiry_date",
   "next_appointment_date",
   "amended_from",
-  "data_8",
-  "type_sec",
-  "type",
-  "type_col",
-  "sr_details_simple_sec",
-  "sr_details_html",
-  "sr_details_sec",
+  "patient_info_sec",
+  "current_complaints",
+  "history",
+  "current_rx",
+  "keratometry",
+  "sr_simple_sec",
+  "sr_html",
+  "sr_sec",
+  "sr_col_right",
+  "sr_sph_right",
+  "sr_cyl_right",
+  "sr_axis_right",
+  "sr_va_right",
+  "sr_bc_right",
+  "sr_dia_right",
+  "sr_add_right",
+  "sr_col_left",
+  "sr_sph_left",
+  "sr_cyl_left",
+  "sr_axis_left",
+  "sr_va_left",
+  "sr_bc_left",
+  "sr_dia_left",
+  "sr_add_left",
   "details_simple_sec",
   "details_html",
   "details_sec",
@@ -72,15 +90,11 @@
   "info_sec",
   "prescription_notes_section",
   "notes",
+  "slitlamp",
+  "fundus",
   "column_break_63",
   "notes_cust",
-  "slit_lamp_section",
-  "slitlamp",
-  "column_break_67",
   "slitlamp_cust",
-  "fundus_section",
-  "fundus",
-  "column_break_71",
   "fundus_cust",
   "section_break_73",
   "ap",
@@ -130,10 +144,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "type_sec",
-   "fieldtype": "Section Break"
-  },
-  {
    "default": "Spectacles",
    "fieldname": "type",
    "fieldtype": "Select",
@@ -141,28 +151,6 @@
    "options": "\nSpectacles\nContact Lens",
    "reqd": 1
   },
-  {
-   "fieldname": "type_col",
-   "fieldtype": "Column Break"
-  },
-  {
-   "depends_on": "type",
-   "fieldname": "sr_details_simple_sec",
-   "fieldtype": "Section Break",
-   "label": "Subjective Refraction"
-  },
-  {
-   "fieldname": "sr_details_html",
-   "fieldtype": "HTML"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "sr_details_sec",
-   "fieldtype": "Section Break",
-   "hidden": 1,
-   "label": "Subjective Refraction"
-  },
-
   {
    "depends_on": "type",
    "fieldname": "details_simple_sec",
@@ -452,7 +440,7 @@
   },
   {
    "fieldname": "remarks",
-   "fieldtype": "Text"
+   "fieldtype": "Small Text"
   },
   {
    "fieldname": "amended_from",
@@ -469,13 +457,10 @@
    "label": "Next Appointment Date"
   },
   {
-   "fieldname": "data_8",
-   "fieldtype": "Data"
-  },
-  {
+   "collapsible": 1,
    "fieldname": "prescription_notes_section",
    "fieldtype": "Section Break",
-   "label": "Prescription Notes"
+   "label": "Notes"
   },
   {
    "fieldname": "column_break_63",
@@ -487,18 +472,9 @@
    "label": "Prescription Notes (Patient)"
   },
   {
-   "fieldname": "slit_lamp_section",
-   "fieldtype": "Section Break",
-   "label": "Slit Lamp"
-  },
-  {
    "fieldname": "slitlamp",
    "fieldtype": "Small Text",
    "label": "Slit Lamp"
-  },
-  {
-   "fieldname": "column_break_67",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "slitlamp_cust",
@@ -506,18 +482,9 @@
    "label": "Slit Lamp (Patient)"
   },
   {
-   "fieldname": "fundus_section",
-   "fieldtype": "Section Break",
-   "label": "Fundus"
-  },
-  {
    "fieldname": "fundus",
    "fieldtype": "Small Text",
    "label": "Fundus"
-  },
-  {
-   "fieldname": "column_break_71",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "fundus_cust",
@@ -537,11 +504,134 @@
    "fieldname": "section_break_73",
    "fieldtype": "Section Break",
    "label": "Assessment and Plan"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "patient_info_sec",
+   "fieldtype": "Section Break",
+   "label": "Patient Info"
+  },
+  {
+   "fieldname": "current_complaints",
+   "fieldtype": "Small Text",
+   "label": "Current Complaints"
+  },
+  {
+   "fieldname": "history",
+   "fieldtype": "Small Text",
+   "label": "History"
+  },
+  {
+   "fieldname": "current_rx",
+   "fieldtype": "Small Text",
+   "label": "Current Rx"
+  },
+  {
+   "fieldname": "keratometry",
+   "fieldtype": "Small Text",
+   "label": "AutoRefract + Keratometry"
+  },
+  {
+   "depends_on": "type",
+   "fieldname": "sr_simple_sec",
+   "fieldtype": "Section Break",
+   "label": "Subjective Refraction"
+  },
+  {
+   "fieldname": "sr_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sr_sec",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Subjective Refraction"
+  },
+  {
+   "fieldname": "sr_col_right",
+   "fieldtype": "Column Break",
+   "label": "Right"
+  },
+  {
+   "fieldname": "sr_sph_right",
+   "fieldtype": "Data",
+   "label": "SPH"
+  },
+  {
+   "fieldname": "sr_cyl_right",
+   "fieldtype": "Data",
+   "label": "CYL"
+  },
+  {
+   "fieldname": "sr_axis_right",
+   "fieldtype": "Data",
+   "label": "AXIS"
+  },
+  {
+   "fieldname": "sr_va_right",
+   "fieldtype": "Data",
+   "label": "VA"
+  },
+  {
+   "fieldname": "sr_bc_right",
+   "fieldtype": "Data",
+   "label": "BC"
+  },
+  {
+   "fieldname": "sr_dia_right",
+   "fieldtype": "Data",
+   "label": "DIA"
+  },
+  {
+   "fieldname": "sr_add_right",
+   "fieldtype": "Data",
+   "label": "ADD"
+  },
+  {
+   "fieldname": "sr_col_left",
+   "fieldtype": "Column Break",
+   "label": "Left"
+  },
+  {
+   "fieldname": "sr_sph_left",
+   "fieldtype": "Data",
+   "label": "SPH"
+  },
+  {
+   "fieldname": "sr_cyl_left",
+   "fieldtype": "Data",
+   "label": "CYL"
+  },
+  {
+   "fieldname": "sr_axis_left",
+   "fieldtype": "Data",
+   "label": "AXIS"
+  },
+  {
+   "fieldname": "sr_va_left",
+   "fieldtype": "Data",
+   "label": "VA"
+  },
+  {
+   "fieldname": "sr_bc_left",
+   "fieldtype": "Data",
+   "label": "BC"
+  },
+  {
+   "fieldname": "sr_dia_left",
+   "fieldtype": "Data",
+   "label": "DIA"
+  },
+  {
+   "fieldname": "sr_add_left",
+   "fieldtype": "Data",
+   "label": "ADD"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-05 14:42:12.701071",
+ "modified": "2021-10-06 14:06:22.375269",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
