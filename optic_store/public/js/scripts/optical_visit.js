@@ -1,6 +1,8 @@
 import Vue from 'vue/dist/vue.js';
 
 import PrescriptionForm from '../components/PrescriptionForm.vue';
+import RefractionForm from "../components/RefractionForm";
+
 import {
   get_all_rx_params,
   get_signed_fields,
@@ -93,6 +95,31 @@ function blur_fields(frm) {
   };
 }
 
+function render_sr_vue(frm, fieldName) {
+  const { $wrapper } = frm.get_field(fieldName);
+  $wrapper.empty();
+  const doc = Object.assign(
+    get_all_rx_params().reduce((a, x) => Object.assign(a, { [x]: undefined }), {}),
+    { pd_total: undefined },
+    frm.doc
+  );
+  return new Vue({
+    el: $wrapper.html('<div />').children()[0],
+    data: { doc },
+    render: function(h) {
+      return h(RefractionForm, {
+        props: {
+          doc: this.doc,
+          update: update_fields(frm),
+          fields: frm.fields_dict,
+          blur: blur_fields(frm),
+        },
+      });
+    },
+  });
+}
+
+
 function render_detail_vue(frm, fieldName) {
   const { $wrapper } = frm.get_field(fieldName);
   $wrapper.empty();
@@ -154,7 +181,7 @@ export default {
   },
   refresh: function(frm) {
     //frm.detail_vue = render_detail_vue(frm, 'details_html');
-    frm.sr_vue = render_detail_vue(frm, 'sr_html');
+    frm.sr_vue = render_sr_vue(frm, 'sr_html');
     frm.detail_vue = render_detail_vue(frm, 'details_html');
     if (frm.doc.__islocal) {
       set_expiry_date(frm);
