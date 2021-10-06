@@ -1,7 +1,7 @@
 import Vue from 'vue/dist/vue.js';
 
 import PrescriptionForm from '../components/PrescriptionForm.vue';
-import RefractionForm from "../components/RefractionForm";
+import RefractionForm from "../components/RefractionForm.vue";
 
 import {
   get_all_rx_params,

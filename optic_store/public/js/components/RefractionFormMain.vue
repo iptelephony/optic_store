@@ -12,7 +12,7 @@
         v-bind="get_field_props(side, param)"
       />
     </div>
-    <div class="os-row-header">Reading</div>
+    <div class="os-row-header" style="display: none;">Reading</div>
     <div v-for="side in sides" :class="get_side_class(side, ['os-value'])">
       <refraction-form-field
         :key="`${param}_${side}`"
