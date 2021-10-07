@@ -155,7 +155,7 @@
    "depends_on": "type",
    "fieldname": "details_simple_sec",
    "fieldtype": "Section Break",
-   "label": "Details"
+   "label": "Prescription Details"
   },
   {
    "fieldname": "details_html",
@@ -166,7 +166,7 @@
    "fieldname": "details_sec",
    "fieldtype": "Section Break",
    "hidden": 1,
-   "label": "Details"
+   "label": "Prescription Details"
   },
   {
    "fieldname": "details_col_right",
@@ -631,7 +631,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-06 14:06:22.375269",
+ "modified": "2021-10-07 10:52:44.386130",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",

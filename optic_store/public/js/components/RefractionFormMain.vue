@@ -13,7 +13,7 @@
       />
     </div>
     <div class="os-row-header" style="display: none;">Reading</div>
-    <div v-for="side in sides" :class="get_side_class(side, ['os-value'])">
+    <div v-for="side in sides" :class="get_side_class(side, ['os-value'])" style="display: none;">
       <refraction-form-field
         :key="`${param}_${side}`"
         v-for="param in params.map(p => `${p}_reading`)"

@@ -39,3 +39,38 @@ export function get_prec2_fields() {
     )
     .flat();
 }
+
+export const SR_PARAMS_SPEC_DIST = ['sr_sph', 'sr_cyl', 'sr_axis', 'sr_va'];
+export const SR_PARAMS_CONT_DIST = [...SR_PARAMS_SPEC_DIST, 'sr_bc', 'sr_dia'];
+export const SR_PARAMS_OTHER = ['sr_pd', 'sr_prism', 'sr_iop'];
+
+export function get_sr_all_params() {
+  const params = [
+    ...SR_PARAMS_CONT_DIST,
+    ...SR_PARAMS_OTHER,
+    'sr_add',
+  ];
+  return ['right', 'left']
+    .map(side => params.map(param => `${param}_${side}`))
+    .flat();
+}
+
+export function get_sr_signed_fields() {
+  const params = ['sr_sph', 'sr_cyl'];
+  return ['right', 'left']
+    .map(side =>
+      [...params, 'sr_add'].map(
+        p => `${p}_${side}`
+      )
+    )
+    .flat();
+}
+
+export function get_sr_prec2_fields() {
+  const params = ['sr_bc', 'sr_dia', 'sr_iop'];
+  return ['right', 'left']
+    .map(side =>
+      [...params].map(p => `${p}_${side}`)
+    )
+    .flat();
+}

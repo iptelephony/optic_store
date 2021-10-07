@@ -7,6 +7,9 @@ import {
   get_all_rx_params,
   get_signed_fields,
   get_prec2_fields,
+  get_sr_all_params,
+  get_sr_signed_fields,
+  get_sr_prec2_fields
 } from '../utils/constants';
 import { format } from '../utils/format';
 
@@ -95,31 +98,6 @@ function blur_fields(frm) {
   };
 }
 
-function render_sr_vue(frm, fieldName) {
-  const { $wrapper } = frm.get_field(fieldName);
-  $wrapper.empty();
-  const doc = Object.assign(
-    get_all_rx_params().reduce((a, x) => Object.assign(a, { [x]: undefined }), {}),
-    { pd_total: undefined },
-    frm.doc
-  );
-  return new Vue({
-    el: $wrapper.html('<div />').children()[0],
-    data: { doc },
-    render: function(h) {
-      return h(RefractionForm, {
-        props: {
-          doc: this.doc,
-          update: update_fields(frm),
-          fields: frm.fields_dict,
-          blur: blur_fields(frm),
-        },
-      });
-    },
-  });
-}
-
-
 function render_detail_vue(frm, fieldName) {
   const { $wrapper } = frm.get_field(fieldName);
   $wrapper.empty();
@@ -144,12 +122,88 @@ function render_detail_vue(frm, fieldName) {
   });
 }
 
-function update_detail_vue_props(frm) {
-  if (frm.sr_vue) {
-    frm.sr_vue.doc = Object.assign(frm.sr_vue.doc, frm.doc);
+function sr_update_fields(frm) {
+  const signed_fields = get_sr_signed_fields();
+  const prec2_fields = get_sr_prec2_fields();
+  function get_re(field) {
+    if (signed_fields.includes(field)) {
+      return /^(\+|-)?\d*\.?\d{0,2}$/;
+    }
+    if (field.includes('axis')) {
+      return /^\d{0,3}$/;
+    }
+    if (field.includes('va')) {
+      //return /^[p0-9]*\/?[p0-9]*$/;
+      return /^.{0,15}$/;
+    }
+    if (field.includes('prism')) {
+      //return /^[p0-9]*\/?[p0-9]*$/;
+      return /^.{0,15}$/;
+    }
+    if (prec2_fields.includes(field)) {
+      return /^\d*\.?\d{0,2}$/;
+    }
+    if (field.includes('pd')) {
+      return /^\d*\.?\d{0,1}$/;
+    }
   }
+  function scrub(field, value) {
+    const re = get_re(field);
+    if (re) {
+      return re.test(value) ? value : frm.doc[field];
+    }
+    return value;
+  }
+  return function(field, value) {
+    const scrubbed = scrub(field, value);
+    frm.set_value(field, scrubbed);
+    return scrubbed;
+  };
+}
+
+function sr_blur_fields(frm) {
+  return async function(field, value) {
+    if (field.includes('sr_sph') || field.includes('sr_add') || field.includes('sr_cyl')) {
+      // considers cases where the user might just enter '+' or '-', hence the + '.0'
+      const fval = Math.round(parseFloat((value || '') + '.0') * 4) / 4;
+      await frm.set_value(field, format(field, fval));
+      update_sr_vue_props(frm);
+    }
+  };
+}
+
+function render_sr_vue(frm, fieldName) {
+  const { $wrapper } = frm.get_field(fieldName);
+  $wrapper.empty();
+  const doc = Object.assign(
+    get_sr_all_params().reduce((a, x) => Object.assign(a, { [x]: undefined }), {}),
+    { pd_total: undefined },
+    frm.doc
+  );
+  return new Vue({
+    el: $wrapper.html('<div />').children()[0],
+    data: { doc },
+    render: function(h) {
+      return h(RefractionForm, {
+        props: {
+          doc: this.doc,
+          update: sr_update_fields(frm),
+          fields: frm.fields_dict,
+          blur: sr_blur_fields(frm),
+        },
+      });
+    },
+  });
+}
+
+function update_detail_vue_props(frm) {
   if (frm.detail_vue) {
     frm.detail_vue.doc = Object.assign(frm.detail_vue.doc, frm.doc);
+    console.log('detail_vue.doc:' +JSON.stringify(frm.detail_vue.doc));
+  }
+  if (frm.sr_vue) {
+    frm.sr_vue.doc = Object.assign(frm.sr_vue.doc, frm.doc);
+    console.log('sr_vue.doc:' + JSON.stringify(frm.sr_vue.doc));
   }
 }
 
