@@ -25,6 +25,7 @@
         v-bind="get_field_props(side, 'prism')"
       />
     </div>
+    <!--
     <div :class="{ 'os-row-header': true, first: doc.type !== 'Spectacles' }">IOP</div>
     <div v-for="side in ['right', 'left']" :class="get_side_class(side, ['os-value'])">
       <prescription-form-field
@@ -32,6 +33,7 @@
         v-bind="get_field_props(side, 'iop')"
       />
     </div>
+    -->
   </div>
 </template>
 

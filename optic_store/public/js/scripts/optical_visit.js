@@ -167,7 +167,7 @@ function sr_blur_fields(frm) {
       // considers cases where the user might just enter '+' or '-', hence the + '.0'
       const fval = Math.round(parseFloat((value || '') + '.0') * 4) / 4;
       await frm.set_value(field, format(field, fval));
-      update_sr_vue_props(frm);
+      update_detail_vue_props(frm);
     }
   };
 }

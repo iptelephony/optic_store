@@ -20,14 +20,22 @@
         v-bind="get_field_props(side, param)"
       />
     </div>
+
+    <!--
     <div class="os-row-header" />
     <div v-for="side in sides" :class="get_side_class(side, ['os-value'])">
       <prescription-form-select v-bind="get_field_props(side, 'near')" />
       <prescription-form-select v-bind="get_field_props(side, 'intermediate')" />
     </div>
-    <div class="os-row-header">Add</div>
+    -->
+
+    <div v-for="side in sides" :class="get_side_class(side, ['os-label'])">
+      <span v-for="param in ['add', 'va']">{{ param }}</span>
+    </div>
+    <!--<div class="os-row-header">Add</div>-->
     <div v-for="side in sides" :class="get_side_class(side, ['os-value', 'last'])">
       <prescription-form-field v-bind="get_field_props(side, 'add')" />
+      <prescription-form-field v-bind="get_field_props(side, 'add_va')" />
     </div>
   </div>
 </template>

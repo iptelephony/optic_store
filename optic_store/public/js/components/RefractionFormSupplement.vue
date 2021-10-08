@@ -1,6 +1,6 @@
 <template>
   <div class="os-root">
-    <div v-for="side in ['right', 'left', 'total']" :class="`os-header ${side}`">
+    <div v-for="side in ['right', 'left']" :class="`os-header ${side}`">
       {{ side }}
     </div>
     <!--
@@ -23,7 +23,7 @@
     >
       <refraction-form-field
         :key="`prism_${side}`"
-        v-bind="get_field_props(side, 'prism')"
+        v-bind="get_field_props(side, 'sr_prism')"
       />
     </div>
     <!--

@@ -2,7 +2,7 @@
   <div class="os-root">
     <div v-for="side in sides" :class="`os-header ${side}`">{{ side }}</div>
     <div v-for="side in sides" :class="get_side_class(side, ['os-label'])">
-      <span v-for="param in params">{{ param }}</span>
+      <span v-for="param in params">{{ strip_sr(param) }}</span>
     </div>
     <div class="os-row-header first">Distance</div>
     <div v-for="side in sides" :class="get_side_class(side, ['os-value'])">
@@ -21,19 +21,26 @@
       />
     </div>
     <div class="os-row-header" />
+    <!--
     <div v-for="side in sides" :class="get_side_class(side, ['os-value'])">
       <refraction-form-select v-bind="get_field_props(side, 'near')" />
       <refraction-form-select v-bind="get_field_props(side, 'intermediate')" />
     </div>
+    -->
+    <div v-for="side in sides" :class="get_side_class(side, ['os-label'])">
+      <span v-for="param in ['add', 'va']">{{ param }}</span>
+    </div>
     <div class="os-row-header">Add</div>
+
     <div v-for="side in sides" :class="get_side_class(side, ['os-value', 'last'])">
-      <refraction-form-field v-bind="get_field_props(side, 'add')" />
+      <refraction-form-field v-bind="get_field_props(side, 'sr_add')" />
+      <refraction-form-field v-bind="get_field_props(side, 'sr_add_va')" />
     </div>
   </div>
 </template>
 
 <script>
-import { RX_PARAMS_SPEC_DIST, RX_PARAMS_CONT_DIST } from '../utils/constants';
+import { RX_PARAMS_SPEC_DIST, RX_PARAMS_CONT_DIST, SR_PARAMS_SPEC_DIST, SR_PARAMS_CONT_DIST } from '../utils/constants';
 import RefractionFormField from './RefractionFormField.vue';
 import RefractionFormSelect from './RefractionFormSelect.vue';
 
@@ -51,10 +58,10 @@ export default {
   computed: {
     params: function() {
       if (this.doc.type === 'Spectacles') {
-        return RX_PARAMS_SPEC_DIST;
+        return SR_PARAMS_SPEC_DIST;
       }
       if (this.doc.type === 'Contact Lens') {
-        return RX_PARAMS_CONT_DIST;
+        return SR_PARAMS_CONT_DIST;
       }
       return [];
     },
@@ -80,6 +87,9 @@ export default {
         on_blur: this.on_blur,
       };
     },
+    strip_sr: function(label) {
+      return label.replace('sr_', '');
+    }
   },
 };
 </script>

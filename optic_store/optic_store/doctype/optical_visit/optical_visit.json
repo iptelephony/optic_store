@@ -31,6 +31,8 @@
   "sr_bc_right",
   "sr_dia_right",
   "sr_add_right",
+  "sr_add_va_right",
+  "sr_prism_right",
   "sr_col_left",
   "sr_sph_left",
   "sr_cyl_left",
@@ -39,6 +41,8 @@
   "sr_bc_left",
   "sr_dia_left",
   "sr_add_left",
+  "sr_add_va_left",
+  "sr_prism_left",
   "details_simple_sec",
   "details_html",
   "details_sec",
@@ -52,6 +56,7 @@
   "near_right",
   "intermediate_right",
   "add_right",
+  "add_va_right",
   "sph_reading_right",
   "cyl_reading_right",
   "axis_reading_right",
@@ -68,6 +73,7 @@
   "near_left",
   "intermediate_left",
   "add_left",
+  "add_va_left",
   "sph_reading_left",
   "cyl_reading_left",
   "axis_reading_left",
@@ -627,11 +633,41 @@
    "fieldname": "sr_add_left",
    "fieldtype": "Data",
    "label": "ADD"
+  },
+  {
+   "fieldname": "sr_add_va_right",
+   "fieldtype": "Data",
+   "label": "ADD VA"
+  },
+  {
+   "fieldname": "sr_add_va_left",
+   "fieldtype": "Data",
+   "label": "ADD VA"
+  },
+  {
+   "fieldname": "add_va_right",
+   "fieldtype": "Data",
+   "label": "ADD VA"
+  },
+  {
+   "fieldname": "add_va_left",
+   "fieldtype": "Data",
+   "label": "ADD VA"
+  },
+  {
+   "fieldname": "sr_prism_right",
+   "fieldtype": "Data",
+   "label": "Right"
+  },
+  {
+   "fieldname": "sr_prism_left",
+   "fieldtype": "Data",
+   "label": "Left"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-07 10:52:44.386130",
+ "modified": "2021-10-08 10:44:43.194613",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
