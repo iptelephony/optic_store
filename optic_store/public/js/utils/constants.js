@@ -6,14 +6,14 @@ export const RX_PARAMS_SPEC_READ = RX_PARAMS_SPEC_DIST.map(
 export const RX_PARAMS_CONT_READ = RX_PARAMS_CONT_DIST.map(
   params => `${params}_reading`
 );
-export const RX_PARAMS_OTHER = ['pd', 'prism', 'iop'];
+export const RX_PARAMS_OTHER = ['pd', 'prism', 'iop', 'pd_near'];
 
 export function get_all_rx_params() {
   const params = [
     ...RX_PARAMS_CONT_DIST,
     ...RX_PARAMS_CONT_READ,
     ...RX_PARAMS_OTHER,
-    'add',
+    'add', 'add_va'
   ];
   return ['right', 'left']
     .map(side => params.map(param => `${param}_${side}`))
@@ -48,7 +48,7 @@ export function get_sr_all_params() {
   const params = [
     ...SR_PARAMS_CONT_DIST,
     ...SR_PARAMS_OTHER,
-    'sr_add',
+    'sr_add', 'sr_add_va'
   ];
   return ['right', 'left']
     .map(side => params.map(param => `${param}_${side}`))

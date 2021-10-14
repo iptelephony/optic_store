@@ -4,7 +4,7 @@ export function get_formatted(doc) {
     if (
       param.includes('sph') ||
       param.includes('cyl') ||
-      param.includes('add')
+      (param.includes('add') && !param.includes('va'))
     ) {
       const fval = parseFloat((value || '') + '.0');
       return format(param, fval);
@@ -30,7 +30,7 @@ export function get_formatted(doc) {
 }
 
 export function format(field, value) {
-  if (field.includes('sph') || field.includes('cyl') || field.includes('add')) {
+  if (field.includes('sph') || field.includes('cyl') || (param.includes('add') && !param.includes('va'))) {
     return `${value >= 0 ? '+' : ''}${value.toFixed(2)}`;
   }
   return value;

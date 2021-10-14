@@ -14,6 +14,17 @@
         v-bind="get_field_props(side, 'pd')"
       />
     </div>
+    <div v-if="doc.type === 'Spectacles'" class="os-row-header">PD Near</div>
+    <div
+      v-if="doc.type === 'Spectacles'"
+      v-for="side in ['right', 'left', 'total']"
+      :class="get_side_class(side, ['os-value'])"
+    >
+      <prescription-form-field
+        :key="`pd_near_${side}`"
+        v-bind="get_field_props(side, 'pd_near')"
+      />
+    </div>
     <div v-if="doc.type === 'Spectacles'" class="os-row-header">Prism</div>
     <div
       v-if="doc.type === 'Spectacles'"

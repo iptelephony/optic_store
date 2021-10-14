@@ -82,9 +82,12 @@
   "dia_reading_left",
   "pd_sec",
   "pd_right",
+  "pd_near_right",
   "pd_col",
   "pd_left",
+  "pd_near_left",
   "pd_total",
+  "pd_near_total",
   "prism_sec",
   "prism_right",
   "prism_col",
@@ -138,6 +141,7 @@
   {
    "fieldname": "expiry_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Expiry Date"
   },
   {
@@ -663,11 +667,26 @@
    "fieldname": "sr_prism_left",
    "fieldtype": "Data",
    "label": "Left"
+  },
+  {
+   "fieldname": "pd_near_right",
+   "fieldtype": "Data",
+   "label": "Right (mm)"
+  },
+  {
+   "fieldname": "pd_near_left",
+   "fieldtype": "Data",
+   "label": "Left (mm)"
+  },
+  {
+   "fieldname": "pd_near_total",
+   "fieldtype": "Data",
+   "label": "Total (mm)"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-08 10:44:43.194613",
+ "modified": "2021-10-15 05:34:18.758192",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",

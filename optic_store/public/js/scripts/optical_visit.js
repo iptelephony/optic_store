@@ -48,6 +48,12 @@ function calc_total_pd(frm) {
   return frm.set_value('pd_total', fval.toFixed(1));
 }
 
+function calc_total_pd_near(frm) {
+  const { pd_near_right = 0, pd_near_left = 0 } = frm.doc;
+  const fval = parseFloat(pd_near_right) + parseFloat(pd_near_left);
+  return frm.set_value('pd_near_total', fval.toFixed(1));
+}
+
 function update_fields(frm) {
   const signed_fields = get_signed_fields();
   const prec2_fields = get_prec2_fields();
@@ -177,7 +183,7 @@ function render_sr_vue(frm, fieldName) {
   $wrapper.empty();
   const doc = Object.assign(
     get_sr_all_params().reduce((a, x) => Object.assign(a, { [x]: undefined }), {}),
-    { pd_total: undefined },
+    { pd_total: undefined, pd_near_total: undefined },
     frm.doc
   );
   return new Vue({
@@ -264,10 +270,20 @@ export default {
   },
   pd_right: async function(frm) {
     await calc_total_pd(frm);
+    await calc_total_pd_near(frm);
     update_detail_vue_props(frm);
   },
   pd_left: async function(frm) {
     await calc_total_pd(frm);
+    await calc_total_pd_near(frm);
+    update_detail_vue_props(frm);
+  },
+  pd_near_right: async function(frm) {
+    await calc_total_pd_near(frm);
+    update_detail_vue_props(frm);
+  },
+  pd_near_left: async function(frm) {
+    await calc_total_pd_near(frm);
     update_detail_vue_props(frm);
   },
 };
