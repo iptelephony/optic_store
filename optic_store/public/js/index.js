@@ -23,6 +23,7 @@ import extend_pos from './pages/pos';
 import * as reports from './reports';
 import * as addons from './addons';
 
+/*
 frappe.ui.form.on('Payment Entry', payment_entry);
 frappe.ui.form.on('Sales Invoice', sales_invoice);
 frappe.ui.form.on('Sales Invoice Item', sales_invoice_item);
@@ -49,7 +50,7 @@ frappe.ui.form.OpticalPrescriptionQuickEntryForm = frappe.ui.form.QuickEntryForm
   optical_prescription_qe
 );
 frappe.ui.form.BatchQuickEntryForm = frappe.ui.form.QuickEntryForm.extend(batch_qe);
-
+*/
 const __version__ = '0.10.4';
 
 frappe.provide('optic_store');
@@ -60,13 +61,15 @@ optic_store = {
   addons,
   extend_pos,
   listview: {
-    sales_invoice: sales_invoice_list,
-    stock_entry: stock_entry.listview_settings,
+//    sales_invoice: sales_invoice_list,
+//    stock_entry: stock_entry.listview_settings,
   },
 };
 
+/*
 frappe.views.QueryReport = extend_query_report(frappe.views.QueryReport);
 
 frappe.ui.form.ControlMultiSelect = extend_multiselect(
   frappe.ui.form.ControlMultiSelect
 );
+*/
