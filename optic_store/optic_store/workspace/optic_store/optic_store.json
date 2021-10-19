@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2021-10-07 14:30:49.677549",
+ "modified": "2021-10-20 05:36:26.610579",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -36,15 +36,15 @@
   },
   {
    "doc_view": "List",
-   "label": "Optical Prescriptions",
-   "link_to": "Optical Prescription",
+   "label": "Sales Orders",
+   "link_to": "Sales Order",
    "type": "DocType"
   },
   {
-   "doc_view": "",
-   "label": "Optic Store Settings",
-   "link_to": "Optical Store Settings",
-   "type": "DocType"
+   "doc_view": "Dashboard",
+   "label": "Stock Dashboard",
+   "link_to": "Stock",
+   "type": "Dashboard"
   }
  ],
  "shortcuts_label": "Shortcuts"

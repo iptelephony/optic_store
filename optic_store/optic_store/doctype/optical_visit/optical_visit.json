@@ -108,7 +108,13 @@
   "section_break_73",
   "ap",
   "section_break_74",
-  "remarks"
+  "remarks",
+  "external_reports_section",
+  "report_dr",
+  "column_break_105",
+  "report_cd",
+  "column_break_107",
+  "report_amd"
  ],
  "fields": [
   {
@@ -682,11 +688,39 @@
    "fieldname": "pd_near_total",
    "fieldtype": "Data",
    "label": "Total (mm)"
+  },
+  {
+   "fieldname": "external_reports_section",
+   "fieldtype": "Section Break",
+   "label": "External Reports"
+  },
+  {
+   "fieldname": "report_dr",
+   "fieldtype": "Attach",
+   "label": "DR Report"
+  },
+  {
+   "fieldname": "column_break_105",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_cd",
+   "fieldtype": "Attach",
+   "label": "CD Report"
+  },
+  {
+   "fieldname": "column_break_107",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "report_amd",
+   "fieldtype": "Attach",
+   "label": "AMD Report"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-15 05:34:18.758192",
+ "modified": "2021-10-20 06:03:06.933713",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
