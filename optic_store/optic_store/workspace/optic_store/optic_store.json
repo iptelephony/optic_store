@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2021-10-20 13:29:13.856535",
+ "modified": "2021-10-20 21:06:10.013482",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -38,6 +38,12 @@
    "doc_view": "List",
    "label": "Sales Orders",
    "link_to": "Sales Order",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
    "type": "DocType"
   },
   {
