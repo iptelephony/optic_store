@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2021-10-20 06:33:16.829399",
+ "modified": "2021-10-20 13:29:13.856535",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -45,6 +45,12 @@
    "label": "Stock Dashboard",
    "link_to": "Stock",
    "type": "Dashboard"
+  },
+  {
+   "doc_view": "Report Builder",
+   "label": "Stock Ledger",
+   "link_to": "Stock Ledger",
+   "type": "Report"
   }
  ],
  "shortcuts_label": "Shortcuts"
