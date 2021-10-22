@@ -140,7 +140,6 @@
    "default": "Today",
    "fieldname": "test_date",
    "fieldtype": "Date",
-   "hidden": 1,
    "in_list_view": 1,
    "label": "Test Date"
   },
@@ -720,7 +719,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-20 06:03:06.933713",
+ "modified": "2021-10-22 17:05:41.219032",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
