@@ -717,9 +717,8 @@
    "label": "AMD Report"
   }
  ],
- "is_submittable": 1,
  "links": [],
- "modified": "2021-10-22 17:05:41.219032",
+ "modified": "2021-10-22 21:05:56.539699",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
@@ -735,8 +734,6 @@
    "share": 1
   },
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
    "email": 1,
    "export": 1,
@@ -745,12 +742,9 @@
    "report": 1,
    "role": "Optician",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -760,7 +754,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
