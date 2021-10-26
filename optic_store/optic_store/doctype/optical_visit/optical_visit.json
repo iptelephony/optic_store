@@ -17,7 +17,6 @@
   "next_appointment_date",
   "is_referable",
   "referral_notes",
-  "amended_from",
   "patient_info_sec",
   "current_complaints",
   "history",
@@ -151,15 +150,6 @@
    "fieldtype": "Date",
    "hidden": 1,
    "label": "Expiry Date"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Optical Visit",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "default": "Spectacles",
@@ -461,15 +451,6 @@
    "fieldtype": "Small Text"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Optical Visit",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
    "fieldname": "next_appointment_date",
    "fieldtype": "Date",
    "label": "Next Appointment Date"
@@ -738,7 +719,7 @@
   }
  ],
  "links": [],
- "modified": "2021-10-26 21:42:29.863937",
+ "modified": "2021-10-26 22:07:57.088482",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
