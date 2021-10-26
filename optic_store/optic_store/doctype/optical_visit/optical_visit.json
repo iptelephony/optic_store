@@ -9,11 +9,14 @@
  "field_order": [
   "customer",
   "customer_name",
+  "telemedc_id",
   "type",
   "meta_col",
   "test_date",
   "expiry_date",
   "next_appointment_date",
+  "is_referable",
+  "referral_notes",
   "amended_from",
   "patient_info_sec",
   "current_complaints",
@@ -715,10 +718,27 @@
    "fieldname": "report_amd",
    "fieldtype": "Attach",
    "label": "AMD Report"
+  },
+  {
+   "depends_on": "eval:doc.is_referable",
+   "fieldname": "referral_notes",
+   "fieldtype": "Small Text",
+   "label": "Referral Notes"
+  },
+  {
+   "fieldname": "telemedc_id",
+   "fieldtype": "Data",
+   "label": "TeleMedC Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_referable",
+   "fieldtype": "Check",
+   "label": "Referable"
   }
  ],
  "links": [],
- "modified": "2021-10-22 21:05:56.539699",
+ "modified": "2021-10-26 21:42:29.863937",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",

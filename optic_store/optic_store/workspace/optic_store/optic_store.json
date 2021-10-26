@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2021-10-20 21:06:10.013482",
+ "modified": "2021-10-26 21:48:44.256923",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -42,8 +42,14 @@
   },
   {
    "doc_view": "List",
-   "label": "Sales Invoice",
+   "label": "Sales Invoices",
    "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Customers",
+   "link_to": "Customer",
    "type": "DocType"
   },
   {
@@ -57,6 +63,12 @@
    "label": "Stock Ledger",
    "link_to": "Stock Ledger",
    "type": "Report"
+  },
+  {
+   "doc_view": "List",
+   "label": "Appointment Deny List",
+   "link_to": "Appointment Deny List",
+   "type": "DocType"
   }
  ],
  "shortcuts_label": "Shortcuts"
