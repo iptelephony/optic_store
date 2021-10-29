@@ -6,7 +6,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "deny_list"
+  "deny_list",
+  "min_hours"
  ],
  "fields": [
   {
@@ -15,11 +16,18 @@
    "in_list_view": 1,
    "label": "Deny List",
    "options": "Appointment Deny List"
+  },
+  {
+   "default": "0",
+   "fieldname": "min_hours",
+   "fieldtype": "Int",
+   "label": "Min Hours",
+   "options": "Minimum Hours"
   }
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-10-26 20:57:22.002903",
+ "modified": "2021-10-29 07:30:23.129781",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Appointment Deny List Settings",
