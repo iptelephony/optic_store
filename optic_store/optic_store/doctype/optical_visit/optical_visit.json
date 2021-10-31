@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "OV-.YY.-.#####",
  "creation": "2021-10-05 06:44:00.857644",
  "doctype": "DocType",
@@ -719,7 +720,8 @@
   }
  ],
  "links": [],
- "modified": "2021-10-26 22:07:57.088482",
+ "max_attachments": 10,
+ "modified": "2021-10-31 22:17:33.425460",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
@@ -758,6 +760,7 @@
    "write": 1
   }
  ],
+ "search_fields": "customer_name,telemedc_id",
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "customer_name",
