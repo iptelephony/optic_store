@@ -205,11 +205,9 @@ function render_sr_vue(frm, fieldName) {
 function update_detail_vue_props(frm) {
   if (frm.detail_vue) {
     frm.detail_vue.doc = Object.assign(frm.detail_vue.doc, frm.doc);
-    console.log('detail_vue.doc:' +JSON.stringify(frm.detail_vue.doc));
   }
   if (frm.sr_vue) {
     frm.sr_vue.doc = Object.assign(frm.sr_vue.doc, frm.doc);
-    console.log('sr_vue.doc:' + JSON.stringify(frm.sr_vue.doc));
   }
 }
 
