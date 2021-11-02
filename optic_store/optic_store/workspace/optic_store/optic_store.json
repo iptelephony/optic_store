@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2021-10-26 21:48:44.256923",
+ "modified": "2021-11-02 22:52:33.345156",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -24,8 +24,26 @@
  "shortcuts": [
   {
    "doc_view": "Calendar",
-   "label": "Appointments",
+   "label": "Calendar",
    "link_to": "Event",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Appointments",
+   "link_to": "Appointment",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Block-Off Slots",
+   "link_to": "Appointment Deny List",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Customers",
+   "link_to": "Customer",
    "type": "DocType"
   },
   {
@@ -33,6 +51,12 @@
    "label": "Optical Visits",
    "link_to": "Optical Visit",
    "type": "DocType"
+  },
+  {
+   "doc_view": "Dashboard",
+   "label": "Stock Dashboard",
+   "link_to": "Stock",
+   "type": "Dashboard"
   },
   {
    "doc_view": "List",
@@ -47,28 +71,10 @@
    "type": "DocType"
   },
   {
-   "doc_view": "List",
-   "label": "Customers",
-   "link_to": "Customer",
-   "type": "DocType"
-  },
-  {
-   "doc_view": "Dashboard",
-   "label": "Stock Dashboard",
-   "link_to": "Stock",
-   "type": "Dashboard"
-  },
-  {
    "doc_view": "Report Builder",
    "label": "Stock Ledger",
    "link_to": "Stock Ledger",
    "type": "Report"
-  },
-  {
-   "doc_view": "List",
-   "label": "Appointment Deny List",
-   "link_to": "Appointment Deny List",
-   "type": "DocType"
   }
  ],
  "shortcuts_label": "Shortcuts"
