@@ -18,6 +18,7 @@
   "next_appointment_date",
   "is_referable",
   "referral_notes",
+  "email_report",
   "patient_info_sec",
   "current_complaints",
   "history",
@@ -717,11 +718,18 @@
    "fieldname": "is_referable",
    "fieldtype": "Check",
    "label": "Referable"
+  },
+  {
+   "default": "0",
+   "fieldname": "email_report",
+   "fieldtype": "Check",
+   "label": "Send OV/SI via email",
+   "options": "1"
   }
  ],
  "links": [],
  "max_attachments": 10,
- "modified": "2021-10-31 22:17:33.425460",
+ "modified": "2021-11-08 12:58:01.849753",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
