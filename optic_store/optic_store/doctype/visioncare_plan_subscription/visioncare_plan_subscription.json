@@ -16,8 +16,7 @@
   "valid_through",
   "max_members",
   "suspended",
-  "members",
-  "test"
+  "members"
  ],
  "fields": [
   {
@@ -89,19 +88,11 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Company Name"
-  },
-  {
-   "fieldname": "test",
-   "fieldtype": "Read Only",
-   "hidden": 1,
-   "label": "Test",
-   "options": "{plan_name}",
-   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-09 16:28:31.023441",
+ "modified": "2022-02-10 06:50:05.632905",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan Subscription",

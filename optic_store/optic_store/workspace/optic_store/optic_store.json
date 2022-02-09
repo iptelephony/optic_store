@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2021-11-02 22:52:33.345156",
+ "modified": "2022-02-10 06:54:49.313461",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -75,6 +75,12 @@
    "label": "Stock Ledger",
    "link_to": "Stock Ledger",
    "type": "Report"
+  },
+  {
+   "doc_view": "List",
+   "label": "Corporate Plans",
+   "link_to": "Visioncare Plan Subscription",
+   "type": "DocType"
   }
  ],
  "shortcuts_label": "Shortcuts"
