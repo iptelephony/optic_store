@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-12-23 15:21:27.979302",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "member",
+  "member_name",
+  "subscription_plan",
+  "company_name",
+  "plan_name",
+  "usage_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "VCP-USE-.YYYY.-"
+  },
+  {
+   "default": "Now",
+   "fieldname": "usage_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Usage Date"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "label": "Member",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "subscription_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subscription",
+   "options": "Visioncare Plan Subscription"
+  },
+  {
+   "fetch_from": "member.customer_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "subscription_plan.company_name",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "subscription_plan.plan_name",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Care Plan",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-09 16:29:00.551676",
+ "modified_by": "Administrator",
+ "module": "Optic Store",
+ "name": "Visioncare Plan Usage",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Optician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Visioncare Plan Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -13,12 +13,22 @@
   "telemedc_id",
   "type",
   "meta_col",
+  "outlet",
   "test_date",
   "expiry_date",
   "next_appointment_date",
   "is_referable",
   "referral_notes",
   "email_report",
+  "services_requested_section",
+  "refraction",
+  "slitlamp_exam",
+  "drp_glaucoma",
+  "drp_cvd",
+  "column_break_18",
+  "visual_acuity",
+  "amsler_grid_test",
+  "colour_blindness_test",
   "patient_info_sec",
   "current_complaints",
   "history",
@@ -725,11 +735,71 @@
    "fieldtype": "Check",
    "label": "Send OV/SI via email",
    "options": "1"
+  },
+  {
+   "fieldname": "outlet",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Outlet",
+   "options": "Siglap\nBukit Timah\nKitchener"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "services_requested_section",
+   "fieldtype": "Section Break",
+   "label": "Services Requested"
+  },
+  {
+   "default": "0",
+   "fieldname": "refraction",
+   "fieldtype": "Check",
+   "label": "Refraction"
+  },
+  {
+   "default": "0",
+   "fieldname": "drp_glaucoma",
+   "fieldtype": "Check",
+   "label": "DRP - AI DR and Glaucoma"
+  },
+  {
+   "default": "0",
+   "fieldname": "drp_cvd",
+   "fieldtype": "Check",
+   "label": "DRP - AI CVD Risk",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "slitlamp_exam",
+   "fieldtype": "Check",
+   "label": "Slitlamp Biomicroscopy"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "visual_acuity",
+   "fieldtype": "Check",
+   "label": "Visual Acuity"
+  },
+  {
+   "default": "0",
+   "fieldname": "amsler_grid_test",
+   "fieldtype": "Check",
+   "label": "Amsler Grid Test"
+  },
+  {
+   "default": "0",
+   "fieldname": "colour_blindness_test",
+   "fieldtype": "Check",
+   "label": "Colour Blindness Test"
   }
  ],
  "links": [],
  "max_attachments": 10,
- "modified": "2021-11-08 12:58:01.849753",
+ "modified": "2022-01-26 11:39:52.845537",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",

@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:plan_code",
+ "creation": "2021-12-22 15:22:04.881292",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "plan_code",
+  "plan_name",
+  "description",
+  "disabled",
+  "avail_from",
+  "avail_through",
+  "plan_period"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "plan_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled",
+   "options": "0"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "avail_from",
+   "fieldtype": "Date",
+   "label": "Available From"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "avail_through",
+   "fieldtype": "Date",
+   "label": "Available Through"
+  },
+  {
+   "default": "12",
+   "fieldname": "plan_period",
+   "fieldtype": "Int",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Plan period (months)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-09 16:28:09.861794",
+ "modified_by": "Administrator",
+ "module": "Optic Store",
+ "name": "Visioncare Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Optician",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Visioncare Plan Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "plan_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "plan_name",
+ "track_changes": 1
+}

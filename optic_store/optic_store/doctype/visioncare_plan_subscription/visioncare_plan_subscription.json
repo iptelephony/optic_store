@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-12-22 15:46:42.792248",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "vision_careplan",
+  "plan_name",
+  "customer",
+  "company_name",
+  "valid_from",
+  "valid_through",
+  "max_members",
+  "suspended",
+  "members",
+  "test"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "VCP-SUB-.YYYY.-"
+  },
+  {
+   "fieldname": "vision_careplan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Plan",
+   "options": "Visioncare Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "label": "Valid From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_through",
+   "fieldtype": "Date",
+   "label": "Valid Through",
+   "reqd": 1
+  },
+  {
+   "default": "50",
+   "fieldname": "max_members",
+   "fieldtype": "Int",
+   "label": "Max Members"
+  },
+  {
+   "default": "0",
+   "fieldname": "suspended",
+   "fieldtype": "Check",
+   "label": "Suspended"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Members",
+   "options": "Visioncare Plan Member"
+  },
+  {
+   "fetch_from": "vision_careplan.plan_name",
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plan Name",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "label": "Test",
+   "options": "{plan_name}",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-09 16:28:31.023441",
+ "modified_by": "Administrator",
+ "module": "Optic Store",
+ "name": "Visioncare Plan Subscription",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Optician",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Visioncare Plan Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "company_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -225,6 +225,77 @@ function set_expiry_date(frm) {
   frm.set_value('expiry_date', frappe.datetime.add_months(frm.doc.test_date, 6));
 }
 
+function setup_email_filter(frm) {
+	console.log('setup_email_filter');
+	console.log('cur_frm >>> ' + cur_frm);
+       cur_frm.page.menu.find("a:contains("+__("Email")+")").on('click', function() {
+           setTimeout(() => {
+               let found = false;
+        frappe.call({
+            "method": "frappe.client.get_value",
+            "args": {
+                "doctype": "Address",
+                filters: {'address_title':cur_frm.doc.customer_name},
+                'fieldname': ['email_id']
+            },
+            "callback": function(response) {
+                var customer = response.message;
+                console.log("1>>>" + customer);
+                if (customer && !found) {
+                    found = true;
+                   $('*[data-fieldname="recipients"]').val(customer.email_id);
+                }
+            },
+            "error": function(err) {
+                    // frappe.msgprint("No contact email found for customer.");
+            }
+        });
+        frappe.call({
+            "method": "frappe.client.get_value",
+            "args": {
+                "doctype": "Customer",
+                filters: {'name': cur_frm.doc.customer},
+                'fieldname': ['email_id', 'name', 'customer_name']
+            },
+            "callback": function(response) {
+                var customer = response.message;
+                console.log("2>>>" + customer);
+                if (customer) {
+                    if ( typeof customer.email_id !== 'undefined' && !found) {
+                        found=true;
+                        $('*[data-fieldname="recipients"]').val(customer.email_id);
+                    } else {
+                        frappe.call({
+                            "method": "frappe.client.get_value",
+                            "args": {
+                                "doctype": "Contact",
+                                filters: {'name': customer.customer_name + '-' + customer.name},
+                                'fieldname': ['email_id']
+                            },
+                            "callback": function(response) {
+                                var contact = response.message;
+                                if (contact && !found) {
+                                    found=true;
+                                   $('*[data-fieldname="recipients"]').val(contact.email_id);
+                                }
+                            },
+                            "error": function(err) {
+                                    // frappe.msgprint("No contact email found for customer.");
+                            }
+                        });
+                        }
+                }
+            },
+            "error": function(err) {
+            }
+        });
+
+           $('*[data-fieldname="subject"]').val('Eye Check Report for ' + cur_frm.doc.customer_name);
+           },500);
+        });
+
+    }
+
 export default {
   setup: async function(frm) {
     const { message: settings = {} } = await frappe.db.get_value(
@@ -235,6 +306,7 @@ export default {
     toggle_detail_entry(frm, settings.prescription_entry === 'ERPNext');
   },
   onload: function(frm) {
+	  setup_email_filter(frm);
     frm.route_back = setup_route_back(frm);
   },
   refresh: function(frm) {
