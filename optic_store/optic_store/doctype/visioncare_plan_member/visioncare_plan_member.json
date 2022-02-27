@@ -11,6 +11,7 @@
   "member_name",
   "valid_from",
   "valid_through",
+  "enrol_date",
   "suspended"
  ],
  "fields": [
@@ -39,6 +40,7 @@
    "fieldname": "member_name",
    "fieldtype": "Data",
    "in_global_search": 1,
+   "in_list_view": 1,
    "label": "Member Name",
    "read_only": 1
   },
@@ -47,12 +49,20 @@
    "fieldname": "suspended",
    "fieldtype": "Check",
    "label": "Suspended"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Today",
+   "fieldname": "enrol_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Enrolment Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-12-30 11:23:01.188781",
+ "modified": "2022-02-28 00:25:34.390375",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan Member",
