@@ -12,10 +12,12 @@
   "plan_name",
   "customer",
   "company_name",
+  "column_break_6",
   "valid_from",
   "valid_through",
   "max_members",
   "suspended",
+  "section_break_9",
   "members"
  ],
  "fields": [
@@ -88,11 +90,19 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Company Name"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-10 06:50:05.632905",
+ "modified": "2022-02-28 10:45:47.235479",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan Subscription",
