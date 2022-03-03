@@ -121,6 +121,17 @@
   "fundus_cust",
   "section_break_73",
   "ap",
+  "grad_report",
+  "grad_dr",
+  "grad_amd",
+  "grad_cdratio",
+  "grad_glaucoma",
+  "section_break_119",
+  "grad_os",
+  "grad_os_view",
+  "column_break_120",
+  "grad_od",
+  "grad_od_view",
   "section_break_74",
   "remarks",
   "external_reports_section",
@@ -512,6 +523,7 @@
    "label": "Remarks"
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_73",
    "fieldtype": "Section Break",
    "label": "Assessment and Plan"
@@ -795,11 +807,70 @@
    "fieldname": "colour_blindness_test",
    "fieldtype": "Check",
    "label": "Colour Blindness Test"
+  },
+  {
+   "default": "0",
+   "fieldname": "grad_os",
+   "fieldtype": "Attach",
+   "label": "Left Eye"
+  },
+  {
+   "fieldname": "column_break_120",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grad_od",
+   "fieldtype": "Attach",
+   "label": "Right Eye"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "grad_report",
+   "fieldtype": "Section Break",
+   "label": "Grading Report"
+  },
+  {
+   "fieldname": "grad_dr",
+   "fieldtype": "Small Text",
+   "label": "Diabetic Retinopathy"
+  },
+  {
+   "fieldname": "grad_amd",
+   "fieldtype": "Small Text",
+   "label": "Age-related macular degeneration (AMD)"
+  },
+  {
+   "fieldname": "grad_cdratio",
+   "fieldtype": "Small Text",
+   "label": "C/D Ratio"
+  },
+  {
+   "fieldname": "grad_glaucoma",
+   "fieldtype": "Small Text",
+   "label": "Glaucoma Risk"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_119",
+   "fieldtype": "Section Break",
+   "label": "Fundus Images"
+  },
+  {
+   "fieldname": "grad_os_view",
+   "fieldtype": "Image",
+   "options": "grad_os",
+   "width": "2in"
+  },
+  {
+   "fieldname": "grad_od_view",
+   "fieldtype": "Image",
+   "options": "grad_od",
+   "width": "2in"
   }
  ],
  "links": [],
  "max_attachments": 10,
- "modified": "2022-02-28 00:30:18.800338",
+ "modified": "2022-03-03 20:23:36.119786",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
