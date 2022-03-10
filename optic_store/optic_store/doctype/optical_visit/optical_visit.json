@@ -121,17 +121,20 @@
   "fundus_cust",
   "section_break_73",
   "ap",
-  "grad_report",
-  "grad_dr",
-  "grad_amd",
-  "grad_cdratio",
-  "grad_glaucoma",
   "section_break_119",
-  "grad_os",
-  "grad_os_view",
-  "column_break_120",
+  "right_eye",
   "grad_od",
   "grad_od_view",
+  "grad_od_dr",
+  "grad_od_glaucoma",
+  "grad_od_amd",
+  "column_break_120",
+  "left_eye",
+  "grad_os",
+  "grad_os_view",
+  "grad_os_dr",
+  "grad_os_glaucoma",
+  "grad_os_amd",
   "section_break_74",
   "remarks",
   "external_reports_section",
@@ -809,51 +812,25 @@
    "label": "Colour Blindness Test"
   },
   {
+   "bold": 1,
    "default": "0",
    "fieldname": "grad_os",
-   "fieldtype": "Attach",
-   "label": "Left Eye"
+   "fieldtype": "Attach"
   },
   {
    "fieldname": "column_break_120",
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "grad_od",
-   "fieldtype": "Attach",
-   "label": "Right Eye"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "grad_report",
-   "fieldtype": "Section Break",
-   "label": "Grading Report"
-  },
-  {
-   "fieldname": "grad_dr",
-   "fieldtype": "Small Text",
-   "label": "Diabetic Retinopathy"
-  },
-  {
-   "fieldname": "grad_amd",
-   "fieldtype": "Small Text",
-   "label": "Age-related macular degeneration (AMD)"
-  },
-  {
-   "fieldname": "grad_cdratio",
-   "fieldtype": "Small Text",
-   "label": "C/D Ratio"
-  },
-  {
-   "fieldname": "grad_glaucoma",
-   "fieldtype": "Small Text",
-   "label": "Glaucoma Risk"
+   "fieldtype": "Attach"
   },
   {
    "collapsible": 1,
    "fieldname": "section_break_119",
    "fieldtype": "Section Break",
-   "label": "Fundus Images"
+   "label": "Grading"
   },
   {
    "fieldname": "grad_os_view",
@@ -866,11 +843,51 @@
    "fieldtype": "Image",
    "options": "grad_od",
    "width": "2in"
+  },
+  {
+   "fieldname": "grad_os_dr",
+   "fieldtype": "Small Text",
+   "label": "Diabetic Retinopathy"
+  },
+  {
+   "fieldname": "grad_os_glaucoma",
+   "fieldtype": "Small Text",
+   "label": "Glaucoma Suspect"
+  },
+  {
+   "fieldname": "grad_os_amd",
+   "fieldtype": "Small Text",
+   "label": "Age-related Macular Degeneration"
+  },
+  {
+   "fieldname": "grad_od_dr",
+   "fieldtype": "Small Text",
+   "label": "Diabetic Retinopathy"
+  },
+  {
+   "fieldname": "grad_od_glaucoma",
+   "fieldtype": "Small Text",
+   "label": "Glaucoma Suspect"
+  },
+  {
+   "fieldname": "grad_od_amd",
+   "fieldtype": "Small Text",
+   "label": "Age-related Macular Degeneration"
+  },
+  {
+   "fieldname": "right_eye",
+   "fieldtype": "Heading",
+   "label": "Right Eye"
+  },
+  {
+   "fieldname": "left_eye",
+   "fieldtype": "Heading",
+   "label": "Left Eye"
   }
  ],
  "links": [],
  "max_attachments": 10,
- "modified": "2022-03-03 20:23:36.119786",
+ "modified": "2022-03-10 16:44:28.552480",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
