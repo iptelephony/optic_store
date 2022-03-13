@@ -121,17 +121,21 @@
   "fundus_cust",
   "section_break_73",
   "ap",
-  "section_break_119",
+  "grad_img_section",
   "right_eye",
   "grad_od",
   "grad_od_view",
-  "grad_od_dr",
-  "grad_od_glaucoma",
-  "grad_od_amd",
   "column_break_120",
   "left_eye",
   "grad_os",
   "grad_os_view",
+  "grad_section",
+  "right_eye_1",
+  "grad_od_dr",
+  "grad_od_glaucoma",
+  "grad_od_amd",
+  "column_break_126",
+  "left_eye_1",
   "grad_os_dr",
   "grad_os_glaucoma",
   "grad_os_amd",
@@ -827,12 +831,6 @@
    "fieldtype": "Attach"
   },
   {
-   "collapsible": 1,
-   "fieldname": "section_break_119",
-   "fieldtype": "Section Break",
-   "label": "Grading"
-  },
-  {
    "fieldname": "grad_os_view",
    "fieldtype": "Image",
    "options": "grad_os",
@@ -883,11 +881,38 @@
    "fieldname": "left_eye",
    "fieldtype": "Heading",
    "label": "Left Eye"
+  },
+  {
+   "fieldname": "column_break_126",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "grad_img_section",
+   "fieldtype": "Section Break",
+   "label": "Grading"
+  },
+  {
+   "collapsible": 1,
+   "fetch_from": "doc.grad_img_section",
+   "fieldname": "grad_section",
+   "fieldtype": "Section Break",
+   "label": " "
+  },
+  {
+   "fieldname": "right_eye_1",
+   "fieldtype": "Heading",
+   "label": "Right Eye"
+  },
+  {
+   "fieldname": "left_eye_1",
+   "fieldtype": "Heading",
+   "label": "Left Eye"
   }
  ],
  "links": [],
  "max_attachments": 10,
- "modified": "2022-03-10 16:44:28.552480",
+ "modified": "2022-03-12 13:02:12.004523",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
