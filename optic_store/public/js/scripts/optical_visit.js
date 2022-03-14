@@ -357,10 +357,11 @@ export default {
     update_detail_vue_props(frm);
   },
   onload_post_render: function(){
-    var section_head = $('.section-head:contains("Grading")')[0];
+    var section_head = $('.section-head:contains("Grading Image")')[0];
     $(section_head).on("click", function(){
       let c = ($(this).hasClass("collapsed")) ? 1 : 0;
       cur_frm.fields_dict["grad_section"].collapse(c)
+      cur_frm.fields_dict["grad_com_section"].collapse(c)
      })
   },
 };

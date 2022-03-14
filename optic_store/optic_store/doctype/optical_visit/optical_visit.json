@@ -139,6 +139,8 @@
   "grad_os_dr",
   "grad_os_glaucoma",
   "grad_os_amd",
+  "grad_com_section",
+  "grad_comments",
   "section_break_74",
   "remarks",
   "external_reports_section",
@@ -890,14 +892,14 @@
    "collapsible": 1,
    "fieldname": "grad_img_section",
    "fieldtype": "Section Break",
-   "label": "Grading"
+   "label": "Grading Image"
   },
   {
    "collapsible": 1,
    "fetch_from": "doc.grad_img_section",
    "fieldname": "grad_section",
    "fieldtype": "Section Break",
-   "label": " "
+   "label": "Grading Result "
   },
   {
    "fieldname": "right_eye_1",
@@ -908,11 +910,21 @@
    "fieldname": "left_eye_1",
    "fieldtype": "Heading",
    "label": "Left Eye"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "grad_com_section",
+   "fieldtype": "Section Break",
+   "label": "Grader Comments"
+  },
+  {
+   "fieldname": "grad_comments",
+   "fieldtype": "Text"
   }
  ],
  "links": [],
  "max_attachments": 10,
- "modified": "2022-03-12 13:02:12.004523",
+ "modified": "2022-03-14 10:44:25.024904",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
