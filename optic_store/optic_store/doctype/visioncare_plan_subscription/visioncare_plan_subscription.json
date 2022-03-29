@@ -10,6 +10,7 @@
   "naming_series",
   "vision_careplan",
   "plan_name",
+  "plan_price",
   "customer",
   "company_name",
   "column_break_6",
@@ -31,7 +32,6 @@
   {
    "fieldname": "vision_careplan",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Plan",
    "options": "Visioncare Plan",
    "reqd": 1
@@ -39,7 +39,6 @@
   {
    "fieldname": "customer",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Customer",
    "options": "Customer",
    "reqd": 1
@@ -81,8 +80,7 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Plan Name",
-   "reqd": 1
+   "label": "Plan Name"
   },
   {
    "fetch_from": "customer.customer_name",
@@ -98,11 +96,19 @@
   {
    "fieldname": "section_break_9",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "vision_careplan.plan_price",
+   "fieldname": "plan_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Plan Price",
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-28 10:45:47.235479",
+ "modified": "2022-03-29 11:55:17.347958",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan Subscription",

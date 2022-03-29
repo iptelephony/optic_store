@@ -9,6 +9,7 @@
  "field_order": [
   "plan_code",
   "plan_name",
+  "plan_price",
   "description",
   "disabled",
   "avail_from",
@@ -65,11 +66,21 @@
    "fieldname": "description",
    "fieldtype": "Text Editor",
    "label": "Description"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "plan_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price (per pax)",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-09 16:28:09.861794",
+ "modified": "2022-03-29 11:43:04.118166",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan",
