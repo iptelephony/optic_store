@@ -1,0 +1,43 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-03-29 12:20:27.242805",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Care Plan Admin",
+ "links": [],
+ "modified": "2022-03-29 12:21:39.954820",
+ "modified_by": "Administrator",
+ "module": "Optic Store",
+ "name": "Care Plan Admin",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Care Plans",
+   "link_to": "Visioncare Plan",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Corporate Plans",
+   "link_to": "Visioncare Plan Subscription",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Corporate Plan Usage",
+   "link_to": "Visioncare Plan Usage",
+   "type": "DocType"
+  }
+ ]
+}

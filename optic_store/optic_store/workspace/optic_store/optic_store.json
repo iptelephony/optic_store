@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2022-02-10 06:54:49.313461",
+ "modified": "2022-03-29 12:28:30.389831",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -77,9 +77,21 @@
    "type": "Report"
   },
   {
+   "doc_view": "Report Builder",
+   "label": "Stock Balance",
+   "link_to": "Stock Balance",
+   "type": "Report"
+  },
+  {
    "doc_view": "List",
    "label": "Corporate Plans",
    "link_to": "Visioncare Plan Subscription",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Corporate Plan Usage",
+   "link_to": "Visioncare Plan Usage",
    "type": "DocType"
   }
  ],
