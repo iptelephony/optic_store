@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store",
  "links": [],
- "modified": "2022-03-29 12:28:30.389831",
+ "modified": "2022-03-30 22:14:02.109342",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store",
@@ -80,6 +80,12 @@
    "doc_view": "Report Builder",
    "label": "Stock Balance",
    "link_to": "Stock Balance",
+   "type": "Report"
+  },
+  {
+   "doc_view": "Report Builder",
+   "label": "Price List",
+   "link_to": "Optic Store Price List",
    "type": "Report"
   },
   {
