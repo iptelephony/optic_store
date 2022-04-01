@@ -17,6 +17,7 @@
   "valid_from",
   "valid_through",
   "max_members",
+  "user_pay",
   "suspended",
   "section_break_9",
   "members"
@@ -34,6 +35,7 @@
    "fieldtype": "Link",
    "label": "Plan",
    "options": "Visioncare Plan",
+   "permlevel": 1,
    "reqd": 1
   },
   {
@@ -41,31 +43,36 @@
    "fieldtype": "Link",
    "label": "Customer",
    "options": "Customer",
+   "permlevel": 1,
    "reqd": 1
   },
   {
    "fieldname": "valid_from",
    "fieldtype": "Date",
    "label": "Valid From",
+   "permlevel": 1,
    "reqd": 1
   },
   {
    "fieldname": "valid_through",
    "fieldtype": "Date",
    "label": "Valid Through",
+   "permlevel": 1,
    "reqd": 1
   },
   {
    "default": "50",
    "fieldname": "max_members",
    "fieldtype": "Int",
-   "label": "Max Members"
+   "label": "Max Members",
+   "permlevel": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "suspended",
    "fieldtype": "Check",
-   "label": "Suspended"
+   "label": "Suspended",
+   "permlevel": 1
   },
   {
    "fieldname": "members",
@@ -80,14 +87,16 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Plan Name"
+   "label": "Plan Name",
+   "read_only": 1
   },
   {
    "fetch_from": "customer.customer_name",
    "fieldname": "company_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Company Name"
+   "label": "Company Name",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_6",
@@ -103,12 +112,20 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Plan Price",
-   "precision": "2"
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "user_pay",
+   "fieldtype": "Check",
+   "label": "User pay",
+   "permlevel": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-03-29 11:55:17.347958",
+ "modified": "2022-04-01 09:58:42.356584",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan Subscription",
@@ -133,7 +150,8 @@
    "read": 1,
    "report": 1,
    "role": "Optician",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "create": 1,
@@ -146,6 +164,40 @@
    "role": "Visioncare Plan Administrator",
    "share": 1,
    "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Visioncare Plan Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Optician",
+   "share": 1
   }
  ],
  "search_fields": "company_name",

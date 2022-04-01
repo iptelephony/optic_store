@@ -21,19 +21,22 @@
    "in_list_view": 1,
    "label": "Member",
    "options": "Customer",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "valid_from",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Valid From"
+   "label": "Valid From",
+   "permlevel": 1
   },
   {
    "fieldname": "valid_through",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Valid Through"
+   "label": "Valid Through",
+   "permlevel": 1
   },
   {
    "fetch_from": "plan_member.customer_name",
@@ -62,7 +65,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-02-28 00:25:34.390375",
+ "modified": "2022-04-01 10:02:26.619030",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan Member",

@@ -27,6 +27,17 @@ frappe.ui.form.on('Visioncare Plan Subscription', {
         		}
     		}
 
+		// If subscription plan is not user pay, make the members grid read only.
+		// Optician can only add but not delete members.
+	   	if (cur_frm.doc.user_pay == 1) {
+    	    		let canEditMembers = frappe.user_roles.includes('Visioncare Plan Administrator');
+
+    	    		if (!canEditMembers) {
+    	        		$('[data-fieldname="members"]').find('.grid-remove-rows').hide();
+    	    		}
+	    	} else {
+            		cur_frm.set_df_property("members", "read_only", 1);
+	    	}
 	},
 	valid_from: function(frm) {
 		console.log(frm.doc.vision_careplan);
