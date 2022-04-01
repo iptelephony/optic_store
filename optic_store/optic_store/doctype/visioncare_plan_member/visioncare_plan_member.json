@@ -9,6 +9,7 @@
  "field_order": [
   "plan_member",
   "member_name",
+  "member_nric",
   "valid_from",
   "valid_through",
   "enrol_date",
@@ -50,6 +51,7 @@
    "default": "0",
    "fieldname": "suspended",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "Suspended"
   },
   {
@@ -57,21 +59,29 @@
    "default": "Today",
    "fieldname": "enrol_date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Enrolment Date"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "invoice",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Invoice",
    "options": "Sales Invoice"
+  },
+  {
+   "fetch_from": "plan_member.nric_last_4",
+   "fieldname": "member_nric",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NRIC",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-04-01 10:09:23.281097",
+ "modified": "2022-04-01 12:04:56.041871",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Visioncare Plan Member",
