@@ -64,7 +64,7 @@ frappe.ui.form.on('Visioncare Plan Subscription', {
 	valid_from: function(frm) {
 		console.log(frm.doc.vision_careplan);
 		frappe.db.get_value("Visioncare Plan", {"name": frm.doc.vision_careplan}, "plan_period", function(value) {
-			var last_day =frappe.datetime.add_days(frappe.datetime.add_months(frm.doc.valid_from, value.valid_period),-1);
+			var last_day =frappe.datetime.add_days(frappe.datetime.add_months(frappe.datetime.add_months(frm.doc.valid_from, value.valid_period),12), -1);
 			frm.set_value("valid_through", last_day);
         	});
 	}
