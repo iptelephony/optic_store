@@ -27,17 +27,39 @@ frappe.ui.form.on('Visioncare Plan Subscription', {
         		}
     		}
 
-		// If subscription plan is not user pay, make the members grid read only.
-		// Optician can only add but not delete members.
-	   	if (cur_frm.doc.user_pay == 1) {
-    	    		let canEditMembers = frappe.user_roles.includes('Visioncare Plan Administrator');
+		function isOpticalShopUser() {
+			let validRoles = ['Optician', 'Visioncare Plan Administrator', 'Administrator'];
+			for (var i in validRoles) {
+				console.log(validRoles[i]);
+				if (frappe.user_roles.includes(validRoles[i]))
+					return true;
+			}
+			return false;
+		}
 
-    	    		if (!canEditMembers) {
-    	        		$('[data-fieldname="members"]').find('.grid-remove-rows').hide();
-    	    		}
-	    	} else {
+		function isOpticalShopAdmin() {
+			let validRoles = ['Visioncare Plan Administrator', 'Administrator'];
+			for (var i in validRoles) {
+				if (frappe.user_roles.includes(validRoles[i]))
+					return true;
+			}
+			return false;
+		}
+
+		if (isOpticalShopUser()) {
+			// Optician can only add but not delete members.
+			// If not user pay, optician read only as well
+			// Check for not admin instead of just Optician role, because some admin may have Optician role
+			if (!isOpticalShopAdmin()) {
+				if (cur_frm.doc.user_pay == 1) {
+    	        			$('[data-fieldname="members"]').find('.grid-remove-rows').hide();
+				} else {
+            				cur_frm.set_df_property("members", "read_only", 1);
+				}
+			}
+		} else {
             		cur_frm.set_df_property("members", "read_only", 1);
-	    	}
+		}
 	},
 	valid_from: function(frm) {
 		console.log(frm.doc.vision_careplan);
