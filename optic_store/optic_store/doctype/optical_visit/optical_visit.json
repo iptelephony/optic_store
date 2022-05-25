@@ -19,6 +19,7 @@
   "next_appointment_date",
   "is_referable",
   "referral_notes",
+  "is_ungradable",
   "email_report",
   "services_requested_section",
   "refraction",
@@ -920,11 +921,17 @@
   {
    "fieldname": "grad_comments",
    "fieldtype": "Text"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_ungradable",
+   "fieldtype": "Check",
+   "label": "Ungradable"
   }
  ],
  "links": [],
  "max_attachments": 10,
- "modified": "2022-03-14 10:44:25.024904",
+ "modified": "2022-05-25 21:25:12.944243",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optical Visit",
