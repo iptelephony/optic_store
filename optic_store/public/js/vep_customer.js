@@ -1,6 +1,6 @@
 frappe.ui.form.on('Customer',  {
 	refresh: function(frm) {
-	    frm.add_custom_button(__("Subscribed Plans"), function() {
+	    frm.add_custom_button(__("VEP Plans"), function() {
 	        setTimeout(() => {
 	           let found = false;
 	           frappe.call({   
@@ -19,7 +19,7 @@ frappe.ui.form.on('Customer',  {
                 `<tr>
                     <td>${r[0]}</td>
                     <td>${r[2]}</td>
-                    <td>${r[3]}</td>
+                    <td>${r[1]}</td>
                     <td>${r[4]}</td>
                 <tr>`
                 );
@@ -30,10 +30,10 @@ frappe.ui.form.on('Customer',  {
                         <table class="table table-hover">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th scope="col">Subscription Name</th>
-                                        <th scope="col">Company Name</th>
-                                        <th scope="col">Plan Name</th>
-                                        <th scope="col">Usage Date & Time</th>
+                                        <th scope="col">${__('Subscription Name')}</th>
+                                        <th scope="col">${__('Company Name')}</th>
+                                        <th scope="col">${__('Plan Name')}</th>
+                                        <th scope="col">${__('Usage Date & Time')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,7 +45,7 @@ frappe.ui.form.on('Customer',  {
                     		        title: __('Currently Subscribed Plans'),
                     		        fields: [
                     		                    {
-                    		                        label: 'Currently Subscribed Plans',
+                    		                        label: __('Currently Subscribed Plans'),
                     		                        fieldname: 'plans_subscribed_html',
                     		                        fieldtype: 'HTML',
                     		                    }
