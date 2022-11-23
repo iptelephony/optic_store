@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Optic Store Admin",
  "links": [],
- "modified": "2022-04-12 21:41:47.003211",
+ "modified": "2022-11-23 23:19:04.461869",
  "modified_by": "Administrator",
  "module": "Optic Store",
  "name": "Optic Store Admin",
@@ -38,6 +38,18 @@
    "doc_view": "List",
    "label": "Stock Entry",
    "link_to": "Stock Entry",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Leads",
+   "link_to": "Lead",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Sales Partners",
+   "link_to": "Sales Partner",
    "type": "DocType"
   }
  ]
